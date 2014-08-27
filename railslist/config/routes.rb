@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   root :to => "categories#index"
 
+  get 'categories/:id', to: 'posts#index'
+
+  get 'categories/:id/posts/new', to: 'posts#new'
+
+  post 'categories/:id/posts/:id', to: 'posts#create'
+
   resources :categories
   resources :post
   # You can have the root of your site routed with "root"
