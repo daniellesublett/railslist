@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   get '/categories/:id/posts/new', to: 'posts#new', as: 'new'
 
-  post '/categories/:id/posts/:id', to: 'posts#create'
+  post '/categories/:id/posts', to: 'posts#create'
 
-  get 'categories/:id/posts/:id', to: 'posts#show', as: 'show'
+  get 'categories/:id/posts/:post_id', to: 'posts#show', as: 'show'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
