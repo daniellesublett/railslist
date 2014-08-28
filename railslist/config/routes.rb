@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   post '/categories/:id/posts/:id', to: 'posts#create'
 
+  get 'categories/:id/posts/:id', to: 'posts#show', as: 'show'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
