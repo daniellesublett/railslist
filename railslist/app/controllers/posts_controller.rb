@@ -11,6 +11,10 @@ class PostsController < ApplicationController
     @post = Post.create(post_params)
   end
 
+  def show
+    p params
+  end
+
   private
     def post_params
       params.require(:post).permit(:title, :description, :email, :price, :category_id)
