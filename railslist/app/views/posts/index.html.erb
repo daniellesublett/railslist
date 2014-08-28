@@ -1,0 +1,10 @@
+
+<button><%= link_to "BUTTTTTTTTTT", new_path, :method => "get" %></button>
+
+<!--   <a href="/categories/<%=params[:id]%>/posts/new"><button>Make a New Post!</button></a> -->
+
+<ul>
+  <% @posts.each do |post| %>
+  <li><a href="categories/<%=post.category_id%>/posts"><%= post.title %></a></li>
+  <%end%>
+ </ul>
