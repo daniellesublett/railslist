@@ -13,6 +13,8 @@ $(document).on("page:change", function() {
 
   $(".new_post").on("ajax:success", function(e, data, status, xhr){
       console.log(data);
+      $('#post-form').css( 'display', 'none');
+      $('#status-message').append("<strong>You have successfully added a post! Bitch.</strong>" )
     });
 });
 
