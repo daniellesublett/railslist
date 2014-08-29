@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get '/categories/:id/posts/new', to: 'posts#new', as: 'new'
 
-  post '/categories/:id/posts', to: 'posts#create'
+  post '/categories/:id/posts', to: 'posts#create', as: 'create'
 
   get 'categories/:id/posts/:post_id', to: 'posts#show', as: 'show'
 

@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+
   def index
     @posts = Post.all
+    @post = Post.new
   end
 
   def new
@@ -18,9 +20,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    # @category =
     @post = Post.find params[:post_id]
-    p @post
   end
 
   private
