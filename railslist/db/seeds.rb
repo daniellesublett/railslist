@@ -10,7 +10,7 @@ end
 
 module PostImporter
   def self.import
-    50.times do
+    10.times do
       Post.create(title: Faker::Commerce.product_name,
                      price: Faker::Commerce.price,
                      description: Faker::Lorem.paragraph,

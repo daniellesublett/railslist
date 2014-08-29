@@ -7,7 +7,7 @@ feature "homepage splash" do
   end
 
   scenario "User sees a stunningly beautiful homepage" do
-    visit root_path
+    visit "/"
     expect(page).to have_content @category.name
   end
 end
@@ -21,7 +21,7 @@ feature "category posts view" do
   scenario "User sees a list of posts in a category" do
     visit "/categories/1/posts"
     click_button "BUTTTTTTTTTT"
-    expect(page).to have_content('Title')
+    expect(page).to have_content('create a new post')
   end
 end
 
