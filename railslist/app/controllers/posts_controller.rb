@@ -12,11 +12,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     @post.category_id = params[:id]
-    if @post.save
-      redirect_to show_path(params[:id], @post)
-    else
-      render :index
-    end
+    @post.save
+    render :json => @post.to_json
   end
 
   def show
