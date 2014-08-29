@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   root :to => "categories#index"
 
-  get '/categories/:id', to: 'posts#index'
+  get '/categories/:id', to: 'posts#index', as: 'posts'
 
-  get '/categories/:id/posts/new', to: 'posts#new', as: 'new'
+  # get '/categories/:id/posts/new', to: 'posts#new', as: 'new'
 
-  post '/categories/:id/posts', to: 'posts#create', as: 'create'
+  post '/categories/:id', to: 'posts#create', as: 'create'
 
   get 'categories/:id/posts/:post_id', to: 'posts#show', as: 'show'
 

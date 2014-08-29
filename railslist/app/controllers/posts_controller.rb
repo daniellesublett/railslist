@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to show_path(params[:id], @post)
     else
-      render :new
+      render :index
     end
   end
 

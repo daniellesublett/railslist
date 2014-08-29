@@ -1,10 +1,10 @@
 
-  <button id="new-post">New</button>
+  <button id="new-post-button">New</button>
 
   <div id="post-form">
     <h2>create a new post</h2>
     <ul>
-      <%= form_for @post, url: { action: 'create'} do |f| %>
+      <%= form_for @post, remote: true do |f| %>
         <li>
           <%= f.label :title %>
           <%= f.text_field :title %>

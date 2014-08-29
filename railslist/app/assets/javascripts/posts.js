@@ -4,15 +4,22 @@
 
 $(document).on("page:change", function() {
 
+  var revealPostForm = function (){
+    $('#post-form').css( 'display', 'block');
 
-var revealPostForm = function (){
-  $('#post-form').css( 'display', 'block');
-}
+  }
 
-$('#new-post').click(revealPostForm)
+  $('#new-post-button').click(revealPostForm)
 
-})
+  $(".new_post").on("ajax:success", function(e, data, status, xhr){
+      console.log(data);
+    });
+});
 
 
-
-
+// $(document).ready ->
+//   $("#new_post").on("ajax:success", (e, data, status, xhr) ->
+//     $("#new_post").append xhr.responseText
+//      ).on "ajax:error", (e, xhr, status, error) ->
+//     $("#new_post").append "<p>ERROR</p>"
+// });
